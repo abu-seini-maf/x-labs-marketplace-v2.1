@@ -21,6 +21,48 @@ export const networkCollections = {
         "https://lh3.googleusercontent.com/Ju9CkWtV-1Okvf45wo8UctR-M9He2PjILP0oOvxE89AyiPPGtrR3gysu1Zgy0hjd2xKIgjJJtWIc0ybj4Vd7wv8t3pxDGHoJBzDB=s130",
       name: "Bored Ape Yacht Club",
       addrs: "0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D",
+      category: "culture",
+      network: "0x1",
+    },
+    {
+      image:
+        "https://lh3.googleusercontent.com/EFAQpIktMBU5SU0TqSdPWZ4byHr3hFirL_mATsR8KWhM5z-GJljX8E73V933lkyKgv2SAFlfRRjGsWvWbQQmJAwu3F2FDXVa1C9F=s168",
+      name: "World of Women",
+      addrs: "0xe785e82358879f061bc3dcac6f0444462d4b5330",
+      category: "culture",
+      network: "0x1",
+    },
+    {
+      image:
+        "https://lh3.googleusercontent.com/gp39NTyxBPazqowYV9XTFxAU4eNk1i7FlmonHW4Zr7eS9UxEvrZ7f04rOLEhDxcuGxsbUx1Rm_N6Ky_Dp4A1ZQYHFAaEWj5YdBF0qg=s168",
+      name: "RTFKT - MNLTH",
+      addrs: "0x86825dfca7a6224cfbd2da48e85df2fc3aa7c4b1",
+      category: "fashion",
+      network: "0x1",
+    },
+    {
+      image:
+        "https://lh3.googleusercontent.com/-j4h0B8cXDX2PqNlKf5DQQU9BJpJKv-FuW2q9zx2RNlG1cbgpBSsGck1UlZ2Z86Cm-ciw69OwstV_dH79HZ-idPunP9mkoSdxvABHU4=s168",
+      name: "RTFKT x Nike Dunk Genesis CRYPTOKICKS",
+      addrs: "0xf661d58cfe893993b11d53d11148c4650590c692",
+      category: "culture",
+      network: "0x1",
+    },
+    {
+      image:
+        "https://lh3.googleusercontent.com/9LK52eD3wmwzsk2uuNr1Bl9AZNe89ixNgQzhxIEKodUOcf2vLdJv9DAEpC25aIiCfeUFdWTugdUwGyHuHHUKQpvCz3AA8ZmMex00=s168",
+      name: "BFF Friendship Bracelets",
+      addrs: "0x72d47d4d24018ec9048a9b0ae226f1c525b7e794",
+      category: "culture",
+      network: "0x1",
+    },
+    {
+      image:
+        "https://lh3.googleusercontent.com/3mPdo7sj92tMMNcr8-t51cFsTPVJuEZaxkL8Wx_1rPo5mHIqdRmCwC33u6bdLSR7y3TwN2mS4rBCPffsDTdtDGebDWJ-cG2WD-Ha4g=s168",
+      name: "Flyfish Club",
+      addrs: "0xc9d8f15803c645e98b17710a0b6593f097064bef",
+      category: "culture",
+      network: "0x1",
     },
     {
       image:
@@ -65,6 +107,20 @@ export const networkCollections = {
       addrs: "0x1A92f7381B9F03921564a437210bB9396471050C",
     },
   ],
+  "0x4": [
+    {
+        image:
+            "https://cdn.sanity.io/images/5dwhkpa6/production/dba5e960d4317d3b9415bbb4562fca978fe6712b-840x859.png?w=2000&h=2000&fit=max",
+        name: "X-Labs first collection",
+        addrs: "0x26b253B202ADc3Cb0402F7a8d49DA7de348a6ba3",
+    },
+    {
+        image:
+            "https://cdn.sanity.io/images/5dwhkpa6/production/41775f29cec14b2b538a7d06b3cd2d7a9e333c04-231x218.png?w=2000&h=2000&fit=max",
+        name: "X-Labs second collection",
+        addrs: "0xCc2a61f85176Dc3d55aC64511BDe1da734796f7c",
+    },
+],
 };
 
 export const getCollectionsByChain = (chain) => networkCollections[chain];

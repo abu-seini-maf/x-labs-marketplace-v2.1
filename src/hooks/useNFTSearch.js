@@ -1,24 +1,24 @@
-import { ContactsOutlined } from "@ant-design/icons";
 import { useMoralisDapp } from "providers/MoralisDappProvider/MoralisDappProvider";
 import { useEffect, useState } from "react";
 import { useMoralisWeb3Api, useMoralisWeb3ApiCall } from "react-moralis";
 import { useIPFS } from "./useIPFS";
 
-export const useNFTTokenIds = (addr) => {
+export const useNFTSearch = () => {
   const { token } = useMoralisWeb3Api();
   const { chainId } = useMoralisDapp();
   const { resolveLink } = useIPFS();
-  const [NFTTokenIds, setNFTTokenIds] = useState([]);
+  const [NFTSearch, setNFTSearch] = useState([]);
   const [totalNFTs, setTotalNFTs] = useState();
   const [fetchSuccess, setFetchSuccess] = useState(true);
   const {
-    fetch: getNFTTokenIds,
+    fetch: getNFTSearch,
     data,
     error,
     isLoading,
-  } = useMoralisWeb3ApiCall(token.getAllTokenIds, {
+  } = useMoralisWeb3ApiCall(token.searchNFTs, {
     chain: chainId,
-    address: addr,
+    q: 'ERC721',
+    filter: 'global',
     limit: 50,
   });
 
@@ -60,13 +60,13 @@ export const useNFTTokenIds = (addr) => {
           }
         }
       }
-      setNFTTokenIds(NFTs);
+      setNFTSearch(NFTs);
     }
   }, [data]);
 
   return {
-    getNFTTokenIds,
-    NFTTokenIds,
+    getNFTSearch,
+    NFTSearch,
     totalNFTs,
     fetchSuccess,
     error,

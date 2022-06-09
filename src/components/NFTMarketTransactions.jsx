@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useMoralis, useMoralisQuery } from "react-moralis";
 import { useMoralisDapp } from "providers/MoralisDappProvider/MoralisDappProvider";
 import { Table, Tag, Space } from "antd";
-import { PolygonCurrency} from "./Chains/Logos";
+import { PolygonCurrency, ETHLogo } from "./Chains/Logos";
 import moment from "moment";
 
 const styles = {
@@ -24,7 +24,7 @@ function NFTMarketTransactions() {
       "image",
     ])
   );
-  const queryMarketItems = useMoralisQuery("MarketItems");
+  const queryMarketItems = useMoralisQuery("CreatedMarketItems");
   const fetchMarketItems = JSON.parse(
     JSON.stringify(queryMarketItems.data, [
       "updatedAt",
@@ -123,7 +123,7 @@ function NFTMarketTransactions() {
       dataIndex: "price",
       render: (e) => (
         <Space size="middle">
-          <PolygonCurrency/>
+          <ETHLogo/>
           <span>{e}</span>
         </Space>
       ),
