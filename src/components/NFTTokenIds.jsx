@@ -93,7 +93,14 @@ function NFTTokenIds({ inputValue, setInputValue, category, setCategory }) {
   );
   const purchaseItemFunction = "createMarketSale";
   const NFTCollections = getCollectionsByChain(chainId);
-  const NFTCollectionsCategory = [...new Set(NFTCollections?.map(item => item.category))];
+  const [NFTCollectionsCategory, setNFTCollectionsCategory] = useState(['all categories']);
+
+  useEffect(() => {
+    if(NFTCollections && NFTCollections.length > 0) {
+      const collections = [...new Set(NFTCollections?.map(item => item.category))];
+      setNFTCollectionsCategory((old) => [...old, ...collections]);
+    }
+  }, [NFTCollections]);
 
   async function purchase() {
     setLoading(true);
@@ -228,8 +235,6 @@ function NFTTokenIds({ inputValue, setInputValue, category, setCategory }) {
 
         <>
           <div style={styles.topfiltration}>
-            <Button type={category === 'all' ? 'primary' : 'default'} shape='round' 
-            onClick={() => { setCategory('all') }} style={styles.categoryButton} >All Categories</Button>
             {inputValue === "explore" && NFTCollectionsCategory?.map((item, index) => (
               <Button type={category === item ? 'primary' : 'default'} shape='round' key={index} 
               onClick={() => { setCategory(item) }} style={styles.categoryButton}>{item}</Button>
@@ -237,7 +242,7 @@ function NFTTokenIds({ inputValue, setInputValue, category, setCategory }) {
           </div>
           <div style={styles.NFTs}>
             {inputValue === "explore" && NFTCollections?.filter(nft => {
-              if (category === 'all') {
+              if (category === 'all categories') {
                 return nft;
               } else {
                 if (nft.category === category) {

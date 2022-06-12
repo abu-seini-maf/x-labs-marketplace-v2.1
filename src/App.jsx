@@ -9,7 +9,6 @@ import {
 } from "react-router-dom";
 import Account from "components/Account";
 import Chains from "components/Chains";
-import NFTBalance from "components/NFTBalance";
 import NFTTokenIds from "components/NFTTokenIds";
 import { Menu, Layout } from "antd";
 import SearchCollections from "components/SearchCollections";
@@ -17,6 +16,7 @@ import "antd/dist/antd.css";
 import NativeBalance from "components/NativeBalance";
 import "./style.css";
 import Text from "antd/lib/typography/Text";
+import NFTBalance from "components/NFTBalance";
 import NFTMarketTransactions from "components/NFTMarketTransactions";
 import NFTExplore from 'components/NFTExplore';
 
@@ -59,7 +59,7 @@ const App = ({ isServerInfo }) => {
 
 
   const [inputValue, setInputValue] = useState("explore");
-  const [category, setCategory] = useState("all");
+  const [category, setCategory] = useState("all categories");
 
 
   useEffect(() => {
@@ -85,17 +85,11 @@ const App = ({ isServerInfo }) => {
             }}
             defaultSelectedKeys={["nftMarket"]}
           >
-            <Menu.Item key="nftMarket" onClick={() => {setInputValue("explore"); setCategory('all')}} >
+            <Menu.Item key="nftMarket" onClick={() => { setInputValue("explore"); setCategory('all categories') }} >
               <NavLink to="/NFTMarketPlace">Collections</NavLink>
             </Menu.Item>
-            <Menu.Item key="exploreNFTs">
+            <Menu.Item key="exploreNFTs" onClick={() => setCategory('all categories')}>
               <NavLink to="/ExploreNFTs">NFT's</NavLink>
-            </Menu.Item>
-            <Menu.Item key="nft">
-              <NavLink to="/nftBalance">Your NFTs</NavLink>
-            </Menu.Item>
-            <Menu.Item key="transactions">
-              <NavLink to="/Transactions">Your Transactions</NavLink>
             </Menu.Item>
           </Menu>
           <div style={styles.headerRight}>
@@ -106,17 +100,17 @@ const App = ({ isServerInfo }) => {
         </Header>
         <div style={styles.content}>
           <Switch>
-            <Route path="/nftBalance">
-              <NFTBalance />
-            </Route>
             <Route path="/ExploreNFTs">
-              <NFTExplore />
+              <NFTExplore category={category} setCategory={setCategory} />
             </Route>
             <Route path="/NFTMarketPlace">
               <NFTTokenIds inputValue={inputValue} setInputValue={setInputValue} category={category} setCategory={setCategory} />
             </Route>
             <Route path="/Transactions">
               <NFTMarketTransactions />
+            </Route>
+            <Route path="/nftBalance">
+              <NFTBalance />
             </Route>
           </Switch>
           <Redirect to="/NFTMarketPlace" />

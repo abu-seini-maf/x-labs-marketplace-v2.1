@@ -7,6 +7,8 @@ import { useState } from "react";
 import Address from "./Address/Address";
 import { SelectOutlined } from "@ant-design/icons";
 import { getExplorer } from "helpers/networks";
+import { Switch, Route, NavLink } from "react-router-dom";
+
 const styles = {
   account: {
     height: "42px",
@@ -22,6 +24,11 @@ const styles = {
   text: {
     color: "#21BF96",
   },
+  upperNavigation: {
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    margin: '10px 0',
+  }
 };
 
 function Account() {
@@ -61,6 +68,12 @@ function Account() {
         width="400px"
       >
         Account
+
+        <div style={styles.upperNavigation}>
+          <NavLink to="/nftBalance" className="ant-btn ant-btn-default ant-btn-round"> Your NFTs</NavLink>
+          <NavLink to="/Transactions" className="ant-btn ant-btn-default ant-btn-round"> Your Transactions</NavLink>
+        </div>
+
         <Card
           style={{
             marginTop: "10px",

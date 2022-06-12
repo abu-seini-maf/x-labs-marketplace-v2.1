@@ -1,17 +1,20 @@
 export const networkCollections = {
   "0x13881": [
-    //Add Your Collections here
     {
       image:
         "https://lh3.googleusercontent.com/BWCni9INm--eqCK800BbRkL10zGyflxfPwTHt4XphMSWG3XZvPx1JyGdfU9vSor8K046DJg-Q8Y4ioUlWHiCZqgR_L00w4vcbA-w=s0",
       name: "Test Mages",
       addrs: "0x275d553f426355c20b134D944B5b28D31CDb83DA",
+      category: "culture",
+      network: "0x13881",
     },
     {
       image:
         "https://ipfs.moralis.io:2053/ipfs/QmfLbpeVHxReWKNLaXTPcWiafi49eoAL4gRwMGuXtx2Eqe/images/14.png",
       name: "Pixel Show",
       addrs: "0xCA34404dD8Bd6537BE76F3A51B379F8949bD7973",
+      category: "fashion",
+      network: "0x13881",
     },
   ],
 
@@ -66,61 +69,87 @@ export const networkCollections = {
     },
     {
       image:
-        "https://lh3.googleusercontent.com/BdxvLseXcfl57BiuQcQYdJ64v-aI8din7WPk0Pgo3qQFhAUH-B6i-dCqqc_mCkRIzULmwzwecnohLhrcH8A9mpWIZqA7ygc52Sr81hE=s130",
-      name: "Crypto Punks",
-      addrs: "0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB",
+        "https://lh3.googleusercontent.com/N0upGYKkQfLf8gTLaNQyECdXWRyugKRyx9VVHnfA1JzHMKov2WuRM44djsWJJe9-Y11ZEgiKjsLpACqI8xMUa_0CtLkAqg75BymNmUU=s168",
+      name: "Jenkins the Valet: The Writer's Room",
+      addrs: "0x880644ddF208E471C6f2230d31f9027578FA6FcC",
+      category: "culture",
+      network: "0x1",
     },
     {
       image:
-        "https://lh3.googleusercontent.com/l1wZXP2hHFUQ3turU5VQ9PpgVVasyQ79-ChvCgjoU5xKkBA50OGoJqKZeMOR-qLrzqwIfd1HpYmiv23JWm0EZ14owiPYaufqzmj1=s0",
-      name: "Bored Ape Kennel Club",
-      addrs: "0xba30E5F9Bb24caa003E9f2f0497Ad287FDF95623",
+        "https://lh3.googleusercontent.com/sFX4wmm2dIsG-13m-ao8c8O0o6cCEK_3jge8Sj8BewFU6jhy6mymO3qU2RmWs8Ptwg_KiRWYuihZw7A1h-RqUpNNgEqNs8ZdPWPy-0k=s168",
+      name: "Party Degenerates",
+      addrs: "0x4BE3223f8708Ca6b30D1E8b8926cF281EC83E770",
+      category: "culture",
+      network: "0x1",
     },
     {
       image:
-        "https://lh3.googleusercontent.com/7B0qai02OdHA8P_EOVK672qUliyjQdQDGNrACxs7WnTgZAkJa_wWURnIFKeOh5VTf8cfTqW3wQpozGedaC9mteKphEOtztls02RlWQ=s0",
-      name: "Doodles",
-      addrs: "0x8a90CAb2b38dba80c64b7734e58Ee1dB38B8992e",
+        "https://lh3.googleusercontent.com/5y-UCAXiNOFXH551w5bWdZEYOCdHPwbqmcKb-xa3uVQEjQgxvih3HtZWSmzqDqd0uk7kIqFrZhw32Gt6xPBFg4t_n9BKhpou-dwnOg=s168",
+      name: "VeeFriends",
+      addrs: "0xa3AEe8BcE55BEeA1951EF834b99f3Ac60d1ABeeB",
+      category: "culture",
+      network: "0x1",
     },
     {
       image:
-        "https://lh3.googleusercontent.com/7gOej3SUvqALR-qkqL_ApAt97SpUKQOZQe88p8jPjeiDDcqITesbAdsLcWlsIg8oh7SRrTpUPfPlm12lb4xDahgP2h32pQQYCsuOM_s=s0",
-      name: "0N1 Force",
-      addrs: "0x3bf2922f4520a8BA0c2eFC3D2a1539678DaD5e9D",
+        "https://lh3.googleusercontent.com/AFLfluhz2BbvfAUDmTdZzZKvF-wETqzYFZUefPJIw9tO9uXiqftaznKxpgUobXFQqpmG5n2tgAvjbSycubZZ7E89D4K8QbzIFtGWCkY=s168",
+      name: "Adam Bomb Squad",
+      addrs: "0x7AB2352b1D2e185560494D5e577F9D3c238b78C5",
+      category: "fashion",
+      network: "0x1",
     },
     {
       image:
-        "https://lh3.googleusercontent.com/lHexKRMpw-aoSyB1WdFBff5yfANLReFxHzt1DOj_sg7mS14yARpuvYcUtsyyx-Nkpk6WTcUPFoG53VnLJezYi8hAs0OxNZwlw6Y-dmI=s0",
-      name: "Mutant Ape Yacht Club",
-      addrs: "0x60E4d786628Fea6478F785A6d7e704777c86a7c6",
+        "https://lh3.googleusercontent.com/j8Pjrud-q2DP1GTBESnlRhCJvucbiw4eRum6xuK9p-cxm6Z9BCDBdjViK1lX0yMIve-ir2FqpQs19DTfG7GLI38U26DON_VL_r9bzHw=s168",
+      name: "Kith Friends",
+      addrs: "0x130cfAB3817467F532c179d4E6502f5A7e7D44C7",
+      category: "fashion",
+      network: "0x1",
     },
     {
       image:
-        "https://lh3.googleusercontent.com/LIpf9z6Ux8uxn69auBME9FCTXpXqSYFo8ZLO1GaM8T7S3hiKScHaClXe0ZdhTv5br6FE2g5i-J5SobhKFsYfe6CIMCv-UfnrlYFWOM4=s0",
-      name: "CyberKongz",
-      addrs: "0x57a204AA1042f6E66DD7730813f4024114d74f37",
+        "https://lh3.googleusercontent.com/zAil_qoF9TK1Kv0rADui1JfWF4-H3AmAwDNWPJokn5Qhx3AeZ2s4k9bPgGDPxVyXAJZkRvrapw6aa_pdvsYZWKInUxP1x4Q0XABHsg=s168",
+      name: "Playboy Rabbitars Official",
+      addrs: "0x65C234D041F9ef96e2F126263727dfa582206d82",
+      category: "lifestyle",
+      network: "0x1",
     },
     {
       image:
-        "https://lh3.googleusercontent.com/LIov33kogXOK4XZd2ESj29sqm_Hww5JSdO7AFn5wjt8xgnJJ0UpNV9yITqxra3s_LMEW1AnnrgOVB_hDpjJRA1uF4skI5Sdi_9rULi8=s0",
-      name: "Cool Cats NFT",
-      addrs: "0x1A92f7381B9F03921564a437210bB9396471050C",
+        "https://lh3.googleusercontent.com/p2lvRuQZalsroxpmS-q57pGRzyseAzEkLOGGsR6N6tXh_d4x6osxQtZBKqUMRreepnXJcuR80d-9YRIeMy5XnEsPp8aQQcWOyyPqjg=s168",
+      name: "Poolsuite - Executive Member",
+      addrs: "0xB228D7B6e099618Ca71bd5522B3a8c3788A8F172",
+      category: "lifestyle",
+      network: "0x1",
+    },
+    {
+      image:
+        "https://lh3.googleusercontent.com/gWEBAg6y3MHgKv6B00GHwVPsyrudAVcAeG3e6NV6W0_954LApnyvAWg6_PkgAunMWnGpKz8dN7VfhTjiMhMknLyM5StdtC7FiGJtO6M=s168",
+      name: "Shop Pass by Scab Shop",
+      addrs: "0x2a77052D0777f4F02ddb96f69416ADCF130C32B0",
+      category: "lifestyle",
+      network: "0x1",
     },
   ],
   "0x4": [
     {
-        image:
-            "https://cdn.sanity.io/images/5dwhkpa6/production/dba5e960d4317d3b9415bbb4562fca978fe6712b-840x859.png?w=2000&h=2000&fit=max",
-        name: "X-Labs first collection",
-        addrs: "0x26b253B202ADc3Cb0402F7a8d49DA7de348a6ba3",
+      image:
+        "https://cdn.sanity.io/images/5dwhkpa6/production/dba5e960d4317d3b9415bbb4562fca978fe6712b-840x859.png?w=2000&h=2000&fit=max",
+      name: "X-Labs first collection",
+      addrs: "0x26b253B202ADc3Cb0402F7a8d49DA7de348a6ba3",
+      category: "lifestyle",
+      network: "0x4",
     },
     {
-        image:
-            "https://cdn.sanity.io/images/5dwhkpa6/production/41775f29cec14b2b538a7d06b3cd2d7a9e333c04-231x218.png?w=2000&h=2000&fit=max",
-        name: "X-Labs second collection",
-        addrs: "0xCc2a61f85176Dc3d55aC64511BDe1da734796f7c",
+      image:
+        "https://cdn.sanity.io/images/5dwhkpa6/production/41775f29cec14b2b538a7d06b3cd2d7a9e333c04-231x218.png?w=2000&h=2000&fit=max",
+      name: "X-Labs second collection",
+      addrs: "0xCc2a61f85176Dc3d55aC64511BDe1da734796f7c",
+      category: "culture",
+      network: "0x4",
     },
-],
+  ],
 };
 
 export const getCollectionsByChain = (chain) => networkCollections[chain];
