@@ -19,6 +19,7 @@ import Text from "antd/lib/typography/Text";
 import NFTBalance from "components/NFTBalance";
 import NFTMarketTransactions from "components/NFTMarketTransactions";
 import NFTExplore from 'components/NFTExplore';
+import ExploreFeatures from "components/ExploreFeatures";
 
 const { Header, Footer } = Layout;
 
@@ -91,6 +92,9 @@ const App = ({ isServerInfo }) => {
             <Menu.Item key="exploreNFTs" onClick={() => setCategory('all categories')}>
               <NavLink to="/ExploreNFTs">NFT's</NavLink>
             </Menu.Item>
+            <Menu.Item key="exploreFeatures">
+              <NavLink to="/features">Features</NavLink>
+            </Menu.Item>
           </Menu>
           <div style={styles.headerRight}>
             <Chains />
@@ -111,6 +115,9 @@ const App = ({ isServerInfo }) => {
             </Route>
             <Route path="/nftBalance">
               <NFTBalance />
+            </Route>
+            <Route path="/features">
+              <ExploreFeatures />
             </Route>
           </Switch>
           <Redirect to="/NFTMarketPlace" />
