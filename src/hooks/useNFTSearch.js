@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useMoralisWeb3Api, useMoralisWeb3ApiCall } from "react-moralis";
 import { useIPFS } from "./useIPFS";
 
-export const useNFTSearch = () => {
+export const useNFTSearch = (query) => {
   const { token } = useMoralisWeb3Api();
   const { chainId } = useMoralisDapp();
   const { resolveLink } = useIPFS();
@@ -17,9 +17,9 @@ export const useNFTSearch = () => {
     isLoading,
   } = useMoralisWeb3ApiCall(token.searchNFTs, {
     chain: chainId,
-    q: 'ERC721',
+    q: query,
     filter: 'global',
-    limit: 50,
+    limit: 20,
   });
 
   useEffect(async () => {
@@ -40,23 +40,23 @@ export const useNFTSearch = () => {
               });
           } catch (error) {
             setFetchSuccess(false);
-              
-/*          !!Temporary work around to avoid CORS issues when retrieving NFT images!!
-            Create a proxy server as per https://dev.to/terieyenike/how-to-create-a-proxy-server-on-heroku-5b5c
-            Replace <your url here> with your proxy server_url below
-            Remove comments :)
 
-              try {
-                await fetch(`<your url here>/${NFT.token_uri}`)
-                .then(response => response.json())
-                .then(data => {
-                  NFT.image = resolveLink(data.image);
-                });
-              } catch (error) {
-                setFetchSuccess(false);
-              }
-
- */
+            /*          !!Temporary work around to avoid CORS issues when retrieving NFT images!!
+                        Create a proxy server as per https://dev.to/terieyenike/how-to-create-a-proxy-server-on-heroku-5b5c
+                        Replace <your url here> with your proxy server_url below
+                        Remove comments :)
+            
+                          try {
+                            await fetch(`<your url here>/${NFT.token_uri}`)
+                            .then(response => response.json())
+                            .then(data => {
+                              NFT.image = resolveLink(data.image);
+                            });
+                          } catch (error) {
+                            setFetchSuccess(false);
+                          }
+            
+             */
           }
         }
       }

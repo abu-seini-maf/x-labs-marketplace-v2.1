@@ -72,7 +72,7 @@ const App = ({ isServerInfo }) => {
       <Router>
         <Header style={styles.header}>
           <Logo />
-          <SearchCollections setInputValue={setInputValue} />
+          <SearchCollections />
           <Menu
             theme="light"
             mode="horizontal"
