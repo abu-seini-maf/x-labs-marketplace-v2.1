@@ -219,7 +219,7 @@ function SearchCollections() {
                                     src={nft.image || "error"}
                                     fallback={fallbackImg}
                                     alt=""
-                                    style={{ height: "240px" }}
+                                    style={{ height: "240px", objectFit: 'contain' }}
                                 />
                             }
                             key={index}
@@ -227,7 +227,7 @@ function SearchCollections() {
                             {getMarketItem(nft) && (
                                 <Badge.Ribbon text="Buy Now" color="green"></Badge.Ribbon>
                             )}
-                            <Meta title={nft?.metadata?.name ? nft?.metadata?.name : nft?.name} description={`#${nft.token_id}`} />
+                            <Meta title={nft?.metadata?.name ? nft?.metadata?.name : nft?.name} description={`#${nft.token_id} ${ getMarketItem(nft) ? ' - Price: ' + getMarketItem(nft).price / ("1e" + 18) : ''}`} />
                         </Card>
                     ))}
                 </div>
